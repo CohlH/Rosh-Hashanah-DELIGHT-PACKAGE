@@ -64,6 +64,14 @@
         align-items: center;
         margin-bottom: 40px;
       }
+      .image-details {
+        flex: 1;
+        max-width: 900px;
+        margin-right: 20px;
+        position: relative;
+        height: 500px;
+        overflow: hidden;
+      }
       .image-carousel {
         flex: 1;
         max-width: 500px;
@@ -71,6 +79,23 @@
         position: relative;
         height: 500px;
         overflow: hidden;
+      }
+      .heaer-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+      .details-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: opacity 0.5s ease-in-out;
       }
       .carousel-image {
         position: absolute;
@@ -240,12 +265,12 @@
         .image-carousel,
         .product-description,
         .form-column {
-          width: 100%;
+          width: 500px;
           margin-right: 0;
           margin-bottom: 20px;
         }
         .image-carousel {
-          height: 300px;
+          height: 500px;
         }
       }
     </style>
@@ -257,18 +282,20 @@
           <button class="btn" onclick="changeLanguage('en')">English</button>
           <button class="btn" onclick="changeLanguage('he')">עברית</button>
         </div>
-        <h1 id="pageTitle">Rosh Hashanah Joy Box</h1>
+        <div class="image-header">
+          <img src="en_header.png" alt="Rosh Hashanah Joy Box" class="" />
+        </div>
       </header>
 
       <div class="product-info">
         <div class="image-carousel">
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/%D7%9E%D7%95%D7%93%D7%A2%D7%94%20%D7%90%D7%A0%D7%92%D7%9C%D7%99%D7%AA%20(1)-29fnmh2JSLQG7ceey3SVSfe55o3KkL.jpg"
+            src="Gift.png"
             alt="Rosh Hashanah Joy Box"
             class="carousel-image active"
           />
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-intHNcS2t5MUeelEjm2AEdWUfJrHwp.png"
+            src="picture.png"
             alt="Rosh Hashanah Joy Box Details"
             class="carousel-image"
           />
@@ -280,188 +307,24 @@
           </button>
         </div>
         <div class="product-description">
-          <h2 id="productName">Rosh Hashanah Joy Box</h2>
-          <p id="productDescription">
-            Our stunning Rosh Hashanah box is the perfect way to show your loved
-            ones you care.
-          </p>
-          <ul class="features">
-            <li>
-              <i class="flower"></i> <span id="feature1">Fresh Flowers</span>
-            </li>
-            <li>
-              <i class="apple"></i> <span id="feature2">Delicious Cookies</span>
-            </li>
-            <li>
-              <i class="macaron"></i>
-              <span id="feature3">Flavored Macarons</span>
-            </li>
-          </ul>
-          <p id="customization">
-            Make your gift even more special! Personalized photo with wishes,
-            printed on a magnet or wood.
-          </p>
+          <div class="image-details">
+            <img
+              src="details.png"
+              alt="Rosh Hashanah Joy Box"
+              class="details-image active"
+            />
+          </div>
         </div>
       </div>
-
-      <div class="order-form">
-        <h2 id="orderFormTitle">Who would you like to pamper?</h2>
-        <form id="joyBoxForm">
-          <div class="form-row">
-            <div class="form-column">
-              <h3 id="customerInfoTitle">Customer Information</h3>
-              <div class="form-group">
-                <label for="name" id="nameLabel">
-                  <i class="icon icon-user"></i> Name:
-                </label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-group">
-                <label for="phone" id="phoneLabel">
-                  <i class="icon icon-phone"></i> Phone:
-                </label>
-                <input type="tel" id="phone" name="phone" required />
-              </div>
-              <div class="form-group">
-                <label for="email" id="emailLabel">
-                  <i class="icon icon-email"></i> Email:
-                </label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-group">
-                <label for="address" id="addressLabel">
-                  <i class="icon icon-address"></i> Address:
-                </label>
-                <input type="text" id="address" name="address" required />
-              </div>
-            </div>
-            <div class="form-column">
-              <h3 id="orderDetailsTitle">Order Details</h3>
-              <div class="form-group">
-                <label for="quantity" id="quantityLabel">
-                  <i class="icon icon-box"></i> Perfect Box (219 NIS):
-                </label>
-                <input
-                  type="number"
-                  id="quantity"
-                  name="quantity"
-                  min="1"
-                  value="1"
-                  required
-                />
-              </div>
-              <div class="form-group checkbox-wrapper">
-                <input type="checkbox" id="addPhoto" name="addPhoto" />
-                <label for="addPhoto" id="addPhotoLabel">
-                  <i class="icon icon-photo"></i> Add printed photo (30 NIS)
-                </label>
-              </div>
-              <div id="photoDetails" style="display: none">
-                <div class="form-group">
-                  <label for="photoText" id="photoTextLabel"
-                    >Photo text (up to 5 words):</label
-                  >
-                  <input
-                    type="text"
-                    id="photoText"
-                    name="photoText"
-                    maxlength="50"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="photoUpload" id="photoUploadLabel"
-                    >Upload photo:</label
-                  >
-                  <input
-                    type="file"
-                    id="photoUpload"
-                    name="photoUpload"
-                    accept="image/*"
-                  />
-                </div>
-              </div>
-              <div class="form-group checkbox-wrapper">
-                <input type="checkbox" id="addCard" name="addCard" />
-                <label for="addCard" id="addCardLabel">
-                  <i class="icon icon-card"></i> Add greeting card (15 NIS)
-                </label>
-              </div>
-              <div id="cardDetails" style="display: none">
-                <div class="form-group">
-                  <label id="cardDesignLabel">Choose card design:</label>
-                  <div class="card-designs">
-                    <div class="card-design" onclick="selectCardDesign(1)">
-                      1
-                    </div>
-                    <div class="card-design" onclick="selectCardDesign(2)">
-                      2
-                    </div>
-                    <div class="card-design" onclick="selectCardDesign(3)">
-                      3
-                    </div>
-                  </div>
-                  <input type="hidden" id="cardDesign" name="cardDesign" />
-                </div>
-              </div>
-              <div class="form-group">
-                <label id="deliveryLabel">
-                  <i class="icon icon-delivery"></i> Delivery Option:
-                </label>
-                <div class="checkbox-wrapper">
-                  <input
-                    type="radio"
-                    id="delivery"
-                    name="deliveryOption"
-                    value="delivery"
-                  />
-                  <label for="delivery">Delivery</label>
-                </div>
-                <div class="checkbox-wrapper">
-                  <input
-                    type="radio"
-                    id="pickup"
-                    name="deliveryOption"
-                    value="pickup"
-                  />
-                  <label for="pickup" id="pickupLabel"
-                    >Self-pickup (Ramat Shlomo)</label
-                  >
-                </div>
-              </div>
-              <div id="recipientDetails" style="display: none">
-                <h4 id="recipientTitle">Recipient Details</h4>
-                <div class="form-group">
-                  <label for="recipientName" id="recipientNameLabel"
-                    >Name:</label
-                  >
-                  <input type="text" id="recipientName" name="recipientName" />
-                </div>
-                <div class="form-group">
-                  <label for="recipientAddress" id="recipientAddressLabel"
-                    >Address:</label
-                  >
-                  <input
-                    type="text"
-                    id="recipientAddress"
-                    name="recipientAddress"
-                  />
-                </div>
-                <div class="form-group">
-                  <label for="recipientPhone" id="recipientPhoneLabel"
-                    >Phone:</label
-                  >
-                  <input type="tel" id="recipientPhone" name="recipientPhone" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <button type="submit" class="btn" id="submitButton">
-            Submit Order
-          </button>
-        </form>
-      </div>
     </div>
-
+    <div
+      style="width: 100%; height: 500px"
+      data-fillout-id="ksYWr4HSA7us"
+      data-fillout-embed-type="standard"
+      data-fillout-inherit-parameters
+      data-fillout-dynamic-resize
+    ></div>
+    <script src="https://server.fillout.com/embed/v1/"></script>
     <script>
       const translations = {
         en: {
