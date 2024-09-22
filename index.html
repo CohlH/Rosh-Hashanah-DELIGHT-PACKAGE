@@ -59,9 +59,17 @@
         text-align: center;
         padding: 20px 0;
       }
+      .laptop-img {
+          display: block;
+        } .mobile-img {
+          display: none;
+        }
       @media (max-width: 768px) {
         .laptop-img {
           display: none;
+        }
+         .mobile-img {
+          display: block;
         }
       }
     </style>
@@ -73,13 +81,11 @@
         <button class="btn" onclick="changeLanguage('he')">עברית</button>
       </div>
       <header>
-        <img id="englishImg" src="english.jpg" alt="A4 Sized Image" />
-        <img
-          id="hebrewImg"
-          src="hebrew.jpg"
-          alt="A4 Sized Image"
-          style="display: none"
-        />
+        <img id="englishImg" class="laptop-img" src="english.jpg" alt="A4 Sized Image" />
+        <img id="hebrewImg"  class="laptop-img" src="hebrew.jpg" alt="A4 Sized Image" style="display: none"/>
+        
+        <img id="englishImg" class="mobile-img" src="mobileen.jpg" alt="A4 Sized Image" />
+        <img id="hebrewImg"  class="mobile-img" src="mobilehe.jpg" alt="A4 Sized Image" style="display: none"/>
       </header>
       <div
         id="english-form"
