@@ -1,33 +1,97 @@
 <!DOCTYPE html>
-<html lang="he">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>תודה רבה</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rosh Hashanah DELIGHT PACKAGE</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 20%;
-            background-color: #f0f8ff;
+      :root {
+        --main-color: rgb(206, 134, 147);
+        --text-color: #ffffff;
+        --accent-color: #f3d3d3;
+        --dark-accent: #a86d7a;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--main-color);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+      img {
+        max-width: 1200px; /* Maximum width for A4 at 96 DPI */
+        height: auto; /* Keeps the original proportions */
+        width: 100%;
+        display: block; /* Ensures no extra space below the image */
+        opacity: 1;
+        transition: opacity 0.5s ease; /* Fade effect */
+      }
+      .container {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .language-selector {
+        text-align: right;
+        margin-bottom: 20px;
+      }
+      .btn {
+        background-color: var(--accent-color);
+        color: var(--main-color);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+      }
+      .btn:hover {
+        background-color: #ffffff;
+      }
+      header {
+        text-align: center;
+        padding: 20px 0;
+      }
+      @media (max-width: 768px) {
+        .laptop-img {
+          display: none;
         }
-        h1 {
-            color: #4CAF50;
-        }
+      }
     </style>
-</head>
-<body>
-    <h1>תודה רבה!</h1>
-    <p>הטופס נשלח בהצלחה.</p>
-</body>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img id="englishImg" src="thanken.jpg" alt="A4 Sized Image" />
+        <img id="hebrewImg" src="thankhe.jpg" alt="A4 Sized Image" style="display: none" />
+      </header>
+    </div>
     
-    <div
-      style="width: 100%; height: 500px"
-      data-fillout-id="ksYWr4HSA7us"
-      data-fillout-embed-type="standard"
-      data-fillout-inherit-parameters
-      data-fillout-dynamic-resize
-    ></div>
-    <div style="width:100%;height:500px;" data-fillout-id="vvkSfHMSYMus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
-    <script src="https://server.fillout.com/embed/v1/"></script>
+    <script>
+      // Function to get query parameters from the URL
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      // Check the 'lang' parameter
+      const lang = getQueryParam('lang');
+      
+      const englishImg = document.getElementById('englishImg');
+      const hebrewImg = document.getElementById('hebrewImg');
+
+      if (lang === 'he') {
+        englishImg.style.display = 'none';
+        hebrewImg.style.display = 'block';
+      } else {
+        englishImg.style.display = 'block';
+        hebrewImg.style.display = 'none';
+      }
+    </script>
+  </body>
 </html>
