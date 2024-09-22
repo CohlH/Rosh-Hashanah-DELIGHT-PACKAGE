@@ -3,42 +3,126 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Display</title>
+    <title>Rosh Hashanah DELIGHT PACKAGE</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
+      :root {
+        --main-color: rgb(206, 134, 147);
+        --text-color: #ffffff;
+        --accent-color: #f3d3d3;
+        --dark-accent: #a86d7a;
+      }
       body {
+        font-family: "Montserrat", sans-serif;
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start; /* Align the image to the top */
-        height: 100vh;
+        background-color: var(--main-color);
+        color: var(--text-color);
+        line-height: 1.6;
       }
       img {
         max-width: 1200px; /* Maximum width for A4 at 96 DPI */
         height: auto; /* Keeps the original proportions */
         width: 100%;
         display: block; /* Ensures no extra space below the image */
+        opacity: 1;
+        transition: opacity 0.5s ease; /* Fade effect */
       }
       .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 20px;
       }
+      .language-selector {
+        text-align: right;
+        margin-bottom: 20px;
+      }
+      .btn {
+        background-color: var(--accent-color);
+        color: var(--main-color);
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+        border-radius: 5px;
+      }
+      .btn:hover {
+        background-color: #ffffff;
+      }
+      header {
+        text-align: center;
+        padding: 20px 0;
+      }
+      @media (max-width: 768px) {
+        .laptop-img {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="container">
+      <div class="language-selector">
+        <button class="btn" onclick="changeLanguage('en')">English</button>
+        <button class="btn" onclick="changeLanguage('he')">עברית</button>
+      </div>
       <header>
-        <img src="english.jpg" alt="A4 Sized Image" />
+        <img id="englishImg" src="english.jpg" alt="A4 Sized Image" />
+        <img
+          id="hebrewImg"
+          src="hebrew.jpg"
+          alt="A4 Sized Image"
+          style="display: none"
+        />
       </header>
       <div
+        id="english-form"
         style="width: 100%; height: 500px"
         data-fillout-id="33zPez1fSius"
         data-fillout-embed-type="standard"
         data-fillout-inherit-parameters
         data-fillout-dynamic-resize
       ></div>
+      <div
+        id="hebrew-form"
+        style="width: 100%; height: 500px; display: none"
+        data-fillout-id="33zPez1fSius"
+        data-fillout-embed-type="standard"
+        data-fillout-inherit-parameters
+        data-fillout-dynamic-resize
+      ></div>
     </div>
+    <script src="https://server.fillout.com/embed/v1/"></script>
+    <script>
+      function changeLanguage(lang) {
+        document.documentElement.lang = lang;
+        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+
+        const englishImg = document.getElementById("englishImg");
+        const hebrewImg = document.getElementById("hebrewImg");
+
+        const englishForm = document.getElementById("english-form");
+        const hebrewForm = document.getElementById("hebrew-form");
+
+        englishImg.style.display = lang === "en" ? "block" : "none";
+        hebrewImg.style.display = lang === "he" ? "block" : "none";
+        englishForm.style.display = lang === "en" ? "block" : "none";
+        hebrewForm.style.display = lang === "he" ? "block" : "none";
+      }
+      const images = document.querySelectorAll("img");
+      images.forEach((img) => {
+        img.addEventListener("transitionend", () => {
+          if (img.classList.contains("hidden")) {
+            img.style.display = "none";
+          } else {
+            img.style.display = "block";
+          }
+        });
+      });
+    </script>
   </body>
-  <script src="https://server.fillout.com/embed/v1/"></script>
 </html>
