@@ -1,140 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png" />
-    <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rosh Hashanah DELIGHT PACKAGE</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --main-color: rgb(206, 134, 147);
-        --text-color: #ffffff;
-        --accent-color: #f3d3d3;
-        --dark-accent: #a86d7a;
-      }
-      body {
-        font-family: "Montserrat", sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: var(--main-color);
-        color: var(--text-color);
-        line-height: 1.6;
-      }
-      img {
-        max-width: 1200px; /* Maximum width for A4 at 96 DPI */
-        height: auto; /* Keeps the original proportions */
-        width: 100%;
-        display: block; /* Ensures no extra space below the image */
-        opacity: 1;
-        transition: opacity 0.5s ease; /* Fade effect */
-      }
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      .language-selector {
-        text-align: right;
-        margin-bottom: 20px;
-      }
-      .btn {
-        background-color: var(--accent-color);
-        color: var(--main-color);
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        font-size: 1rem;
-        transition: background-color 0.3s;
-        border-radius: 5px;
-      }
-      .btn:hover {
-        background-color: #ffffff;
-      }
-      header {
-        text-align: center;
-        padding: 20px 0;
-      }
-      .mobile-img, .laptop-img {
-        display: none;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="language-selector">
-        <button class="btn" onclick="changeLanguage('en')">English</button>
-        <button class="btn" onclick="changeLanguage('he')">עברית</button>
-      </div>
-      <header>
-        <!-- Laptop Images -->
-        <img id="english-laptop" class="laptop-img" src="english.jpg" alt="English Laptop Image" />
-        <img id="hebrew-laptop" class="laptop-img" src="hebrew.jpg" alt="Hebrew Laptop Image" style="display: none;" />
+<head>
+  <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="image/png" />
+  <link rel="icon" sizes="32x32" href="favicon-32x32.png" type="image/png" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rosh Hashanah DELIGHT PACKAGE</title>
+  <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400;700&display=swap"
+          rel="stylesheet"
+  />
+  <style>
+    :root {
+      --main-color: rgb(206, 134, 147);
+      --text-color: #ffffff;
+      --accent-color: #f3d3d3;
+      --dark-accent: #a86d7a;
+    }
+    body {
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--main-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+      display: block;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .language-selector {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .btn {
+      background-color: var(--accent-color);
+      color: var(--main-color);
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: #ffffff;
+    }
+    header {
+      text-align: center;
+      padding: 20px 0;
+    }
+    .mobile-img, .laptop-img {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="language-selector">
+    <button class="btn" onclick="changeLanguage('en')">English</button>
+    <button class="btn" onclick="changeLanguage('he')">עברית</button>
+  </div>
+  <header>
+    <!-- Laptop Images -->
+    <img id="english-laptop" class="laptop-img" src="english.jpg" alt="English Laptop Image" />
+    <img id="hebrew-laptop" class="laptop-img" src="hebrew.jpg" alt="Hebrew Laptop Image" />
 
-        <!-- Mobile Images -->
-        <img id="english-mobile" class="mobile-img" src="mobileen.jpg" alt="English Mobile Image" />
-        <img id="hebrew-mobile" class="mobile-img" src="mobilehe.jpg" alt="Hebrew Mobile Image" style="display: none;" />
-      </header>
-      <div
-        id="english-form"
-        style="width: 100%; height: 500px"
-        data-fillout-id="33zPez1fSius"
-        data-fillout-embed-type="standard"
-        data-fillout-inherit-parameters
-        data-fillout-dynamic-resize
-      ></div>
-      <div
-        id="hebrew-form"
-        style="width: 100%; height: 500px; display: none"
-        data-fillout-id="33zPez1fSius"
-        data-fillout-embed-type="standard"
-        data-fillout-inherit-parameters
-        data-fillout-dynamic-resize
-      ></div>
-    </div>
-    <script src="https://server.fillout.com/embed/v1/"></script>
-    <script>
-      const isMobile = window.matchMedia("(max-width: 768px)");
+    <!-- Mobile Images -->
+    <img id="english-mobile" class="mobile-img" src="mobileen.jpg" alt="English Mobile Image" />
+    <img id="hebrew-mobile" class="mobile-img" src="mobilehe.jpg" alt="Hebrew Mobile Image" />
+  </header>
+  <div
+          id="english-form"
+          style="width: 100%; height: 500px"
+          data-fillout-id="33zPez1fSius"
+          data-fillout-embed-type="standard"
+          data-fillout-inherit-parameters
+          data-fillout-dynamic-resize
+  ></div>
+  <div
+          id="hebrew-form"
+          style="width: 100%; height: 500px; display: none"
+          data-fillout-id="33zPez1fSius"
+          data-fillout-embed-type="standard"
+          data-fillout-inherit-parameters
+          data-fillout-dynamic-resize
+  ></div>
+</div>
+<script src="https://server.fillout.com/embed/v1/"></script>
+<script>
+  const isMobile = window.matchMedia("(max-width: 768px)");
 
-      function changeLanguage(lang) {
-        document.documentElement.lang = lang;
-        document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+  function changeLanguage(lang) {
+    document.documentElement.lang = lang;
+    document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
 
-        const englishLaptop = document.getElementById("english-laptop");
-        const hebrewLaptop = document.getElementById("hebrew-laptop");
-        const englishMobile = document.getElementById("english-mobile");
-        const hebrewMobile = document.getElementById("hebrew-mobile");
+    const englishLaptop = document.getElementById("english-laptop");
+    const hebrewLaptop = document.getElementById("hebrew-laptop");
+    const englishMobile = document.getElementById("english-mobile");
+    const hebrewMobile = document.getElementById("hebrew-mobile");
 
-        const englishForm = document.getElementById("english-form");
-        const hebrewForm = document.getElementById("hebrew-form");
+    const englishForm = document.getElementById("english-form");
+    const hebrewForm = document.getElementById("hebrew-form");
 
-        // Hide/Show images based on language and device
-        if (lang === "en") {
-          englishLaptop.style.display = isMobile.matches ? "none" : "block";
-          hebrewLaptop.style.display = "none";
-          englishMobile.style.display = isMobile.matches ? "block" : "none";
-          hebrewMobile.style.display = "none";
-        } else {
-          englishLaptop.style.display = "none";
-          hebrewLaptop.style.display = isMobile.matches ? "none" : "block";
-          englishMobile.style.display = "none";
-          hebrewMobile.style.display = isMobile.matches ? "block" : "none";
-        }
+    // Hide all images first
+    [englishLaptop, hebrewLaptop, englishMobile, hebrewMobile].forEach(img => img.style.display = "none");
 
-        // Hide/Show forms based on language
-        englishForm.style.display = lang === "en" ? "block" : "none";
-        hebrewForm.style.display = lang === "he" ? "block" : "none";
-      }
+    // Show the appropriate image based on language and device
+    if (lang === "en") {
+      isMobile.matches ? englishMobile.style.display = "block" : englishLaptop.style.display = "block";
+    } else {
+      isMobile.matches ? hebrewMobile.style.display = "block" : hebrewLaptop.style.display = "block";
+    }
 
-      // Automatically update the image when the screen size changes
-      isMobile.addEventListener("change", () => {
-        const lang = document.documentElement.lang;
-        changeLanguage(lang);
-      });
-    </script>
-  </body>
+    // Hide/Show forms based on language
+    englishForm.style.display = lang === "en" ? "block" : "none";
+    hebrewForm.style.display = lang === "he" ? "block" : "none";
+  }
+
+  // Function to get URL parameters
+  function getUrlParameter(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+  }
+
+  // Set initial language based on URL parameter
+  document.addEventListener('DOMContentLoaded', function() {
+    const langParam = getUrlParameter('lang');
+    if (langParam) {
+      changeLanguage(langParam);
+    } else {
+      changeLanguage('en'); // Default to English if no parameter is provided
+    }
+  });
+
+  // Automatically update the image when the screen size changes
+  isMobile.addEventListener("change", () => {
+    const lang = document.documentElement.lang;
+    changeLanguage(lang);
+  });
+</script>
+</body>
 </html>
