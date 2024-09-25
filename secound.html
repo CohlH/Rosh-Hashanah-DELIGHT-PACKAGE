@@ -190,17 +190,17 @@
         <div class="col">
           <div class="image-gallery" id="gallery1">
             <img
-              src="images/Hebrew/header.jpg"
+              src="Images/Hebrew/header.jpg"
               alt="Header Image"
               class="gallery-image active"
             />
             <img
-              src="images/Hebrew/כרטיס1_Page_1.jpg"
+              src="Images/Hebrew/כרטיס1_Page_1.jpg"
               alt="Card 1"
               class="gallery-image"
             />
             <img
-              src="images/Hebrew/כרטיס1_Page_2.jpg"
+              src="Images/Hebrew/כרטיס1_Page_2.jpg"
               alt="Card 2"
               class="gallery-image"
             />
@@ -213,19 +213,19 @@
         <div class="col">
           <div class="order-process">
             <div class="order-step">
-              <img src="images/Hebrew/info.jpg" alt="Step 1" />
+              <img src="Images/Hebrew/info.jpg" alt="Step 1" />
               <p id="step1">בחירת המוצר</p>
             </div>
             <div class="order-step">
-              <img src="images/Hebrew/info.jpg" alt="Step 2" />
+              <img src="Images/Hebrew/info.jpg" alt="Step 2" />
               <p id="step2">מילוי פרטים</p>
             </div>
             <div class="order-step">
-              <img src="images/Hebrew/info.jpg" alt="Step 3" />
+              <img src="Images/Hebrew/info.jpg" alt="Step 3" />
               <p id="step3">תשלום</p>
             </div>
             <div class="order-step">
-              <img src="images/Hebrew/info.jpg" alt="Step 4" />
+              <img src="Images/Hebrew/info.jpg" alt="Step 4" />
               <p id="step4">משלוח</p>
             </div>
           </div>
@@ -242,17 +242,17 @@
         <div class="col">
           <div class="image-gallery" id="gallery2">
             <img
-              src="images/Hebrew/header.jpg"
+              src="Images/Hebrew/header.jpg"
               alt="Header Image"
               class="gallery-image active"
             />
             <img
-              src="images/Hebrew/כרטיס1_Page_1.jpg"
+              src="Images/Hebrew/כרטיס1_Page_1.jpg"
               alt="Card 1"
               class="gallery-image"
             />
             <img
-              src="images/Hebrew/כרטיס1_Page_2.jpg"
+              src="Images/Hebrew/כרטיס1_Page_2.jpg"
               alt="Card 2"
               class="gallery-image"
             />
@@ -264,7 +264,7 @@
       <div class="row">
         <div class="col">
           <img
-            src="images/Hebrew/header.jpg"
+            src="Images/Hebrew/header.jpg"
             alt="Upgraded Image"
             class="single-image"
             id="upgrade-image"
@@ -279,12 +279,12 @@
     <script>
       function createImageGallery(galleryId) {
         const gallery = document.getElementById(galleryId);
-        const images = gallery.querySelectorAll(".gallery-image");
+        const Images = gallery.querySelectorAll(".gallery-image");
         const nav = gallery.querySelector(".gallery-nav");
         let currentImage = 0;
 
         // Create navigation buttons
-        images.forEach((_, index) => {
+        Images.forEach((_, index) => {
           const button = document.createElement("button");
           button.addEventListener("click", () => showImage(index));
           nav.appendChild(button);
@@ -293,19 +293,19 @@
         const buttons = nav.querySelectorAll("button");
 
         function showImage(index) {
-          images[currentImage].classList.remove("active");
+          Images[currentImage].classList.remove("active");
           buttons[currentImage].classList.remove("active");
           currentImage = index;
-          images[currentImage].classList.add("active");
+          Images[currentImage].classList.add("active");
           buttons[currentImage].classList.add("active");
         }
 
         // Initialize
         showImage(0);
 
-        // Auto-rotate images
+        // Auto-rotate Images
         setInterval(() => {
-          showImage((currentImage + 1) % images.length);
+          showImage((currentImage + 1) % Images.length);
         }, 5000);
       }
 
@@ -355,11 +355,11 @@
           if (element) element.textContent = text;
         }
 
-        const imagePath = `images/${
+        const imagePath = `Images/${
           currentLang === "he" ? "Hebrew" : "English"
         }/`;
         document.querySelectorAll("img").forEach((img) => {
-          img.src = img.src.replace(/images\/(Hebrew|English)\//, imagePath);
+          img.src = img.src.replace(/Images\/(Hebrew|English)\//, imagePath);
         });
 
         document.querySelector(".language-toggle").textContent =
