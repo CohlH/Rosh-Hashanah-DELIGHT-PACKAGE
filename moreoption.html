@@ -101,7 +101,7 @@
 
       .image-gallery {
         position: relative;
-        height: 400px;
+        height: 500px;
         overflow: hidden;
       }
 
@@ -193,6 +193,12 @@
         animation: pulse 2s infinite;
       }
 
+      .row{
+        display:flex;
+        gap:20px;
+        flex-wrap: wrap;
+      }
+
       #main-title {
         margin-top: 50px;
       }
@@ -243,11 +249,6 @@
         <div class="section-title" id="impression">התרשמות</div>
         <div class="section-content">
           <div class="image-gallery" id="gallery1">
-            <img
-              src="images/pic1.jpg"
-              alt="Header Image"
-              class="gallery-image active"
-            />
             <img src="images/pic1.jpg" alt="pic 1" class="gallery-image" />
             <img src="images/pic2.jpg" alt="pic 2" class="gallery-image" />
             <img src="images/pic3.jpg" alt="pic 3" class="gallery-image" />
@@ -283,7 +284,7 @@
           </div>
         </div>
       </div>
-
+<div class=row>
       <div class="section">
         <div class="section-title" id="image-upgrade">שדרוג תמונה</div>
         <div class="section-content">
@@ -318,6 +319,7 @@
           </div>
         </div>
       </div>
+</div>
     </div>
 
     <div
