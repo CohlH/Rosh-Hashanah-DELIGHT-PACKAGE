@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rosh Hashanah DELIGHT PACKAGE</title>
+    <title>A sweet gift for the New Year!</title>
     <link
       rel="icon"
       sizes="16x16"
@@ -190,7 +190,9 @@
         text-align: center;
         display:none;
       }
-
+.hide{
+  display:none;
+}
       .click-me button {
         background-color: #f78da7;
         color: white;
@@ -256,7 +258,7 @@
       <h1 id="main-title">מארז מושלם לראש השנה</h1>
 
       <div class="section">
-        <div class="section-title" id="impression">התרשמות</div>
+        <div class="section-title hide" id="impression">התרשמות</div>
         <div class="section-content">
           <div class="image-gallery" id="gallery1">
             <img src="images/pic1.jpg" alt="pic 1" class="gallery-image" />
@@ -337,6 +339,10 @@
           </div>
         </div>
       </div>
+     <div class="section">
+        <div class="section-title" id="end">הזמנות עד יום ראשון כ"ו אלול תשפ"ד 29/9/24 | אספקה עד לראש השנה</div>
+       <p id="contact">להזמנת כמויות שלחו מייל: noamstudio9@gmail.com‏ | לבירורים חייגו 0533181738</p>
+     </div>
 </div>
     </div>
 
@@ -410,26 +416,30 @@
       function updateLanguage() {
         const translations = {
           he: {
-            "main-title": "מארז מושלם לראש השנה",
+            "main-title": "מתנה מתוקה לשנה החדשה!",
             impression: "התרשמות",
             "order-process": "תהליך ההזמנה",
             step1: "1",
             step2: "2",
             step3: "3",
             step4: "4",
-            "card-designs": "עיצובים לכרטיס",
-            "image-upgrade": "שדרוג תמונה",
+            "card-designs": "בחרו כרטיס ברכה מתאים",
+            "image-upgrade": "אפשרות לשדרוג - הוספת תמונה על מגנט",
+            "contact":"להזמנת כמויות שלחו מייל: noamstudio9@gmail.com‏ | לבירורים חייגו 0533181738",
+            "end":הזמנות עד יום ראשון כ"ו אלול תשפ"ד 29/9/24 | אספקה עד לראש השנה"
           },
           en: {
-            "main-title": "Rosh Hashanah DELIGHT PACKAGE",
+            "main-title": "A sweet gift for the New Year!",
             impression: "Impression",
             "order-process": "Order Process",
             step1: "1",
             step2: "2",
             step3: "3",
             step4: "4",
-            "card-designs": "Card Designs",
-            "image-upgrade": "Image Upgrade",
+            "card-designs": "Choose a suitable greeting card",
+            "image-upgrade": "Upgrade option - add a photo on a magnet",
+              "contact":"For bulk orders, send an email to: noamstudio9@gmail.com | For inquiries, call 0533181738.",
+              "end":"Orders until Sunday, 26th of Elul 5784, 29/9/24 | Delivery by Rosh Hashanah."
           },
         };
 
