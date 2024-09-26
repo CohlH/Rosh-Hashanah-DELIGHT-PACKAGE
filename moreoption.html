@@ -106,9 +106,14 @@
         overflow: hidden;
       }
 
-      #gallery2 .image-gallery {
+      #gallery2.image-gallery {
         height: 300px;
       }
+      
+      #gallery3.image-gallery {
+        height: 300px;
+      }
+
 
       .gallery-image {
         position: absolute;
@@ -293,11 +298,20 @@
       <div class="section">
         <div class="section-title" id="image-upgrade">שדרוג תמונה</div>
         <div class="section-content">
-          <img
-            src="images/photo.jpg"
-            alt="Upgraded Image"
-            style="width: 100%; max-height: 300px; object-fit: cover"
-          />
+    
+              <div class="image-gallery" id="gallery3">
+            <img
+              src="images/photo1.jpg"
+              alt="Card Design 1"
+              class="gallery-image active"
+            />
+            <img
+              src="images/photo2.jpg"
+              alt="Card Design 2"
+              class="gallery-image"
+            />
+            <div class="gallery-nav"></div>
+          </div>
         </div>
       </div>
 
@@ -385,6 +399,7 @@
 
       createImageGallery("gallery1");
       createImageGallery("gallery2");
+      createImageGallery("gallery3");
 
       let currentLang = "he";
 
