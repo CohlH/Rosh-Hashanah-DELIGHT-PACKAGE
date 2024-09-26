@@ -85,7 +85,7 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         margin-bottom: 2rem;
         overflow: hidden;
-        flex-grow:1;
+        flex-grow: 1;
       }
 
       .section-title {
@@ -102,18 +102,17 @@
 
       .image-gallery {
         position: relative;
-        height: 500px;
+        height: 600px;
         overflow: hidden;
       }
 
       #gallery2.image-gallery {
         height: 300px;
       }
-      
+
       #gallery3.image-gallery {
         height: 300px;
       }
-
 
       .gallery-image {
         position: absolute;
@@ -163,7 +162,7 @@
 
       .order-step {
         flex: 1;
-        min-width: 200px;
+        min-width: 180px;
         max-width: 250px;
         background-color: var(--secondary-color);
         border-radius: 8px;
@@ -181,23 +180,24 @@
         height: 250px;
         object-fit: cover;
       }
-.end-info{        padding: 1rem;
+      .end-info {
+        padding: 1rem;
         margin: 0;
         font-weight: bold;
         color: var(--primary-color);
         text-align: center;
-}
+      }
       .order-step p {
         padding: 1rem;
         margin: 0;
         font-weight: bold;
         color: var(--primary-color);
         text-align: center;
-        display:none;
+        display: none;
       }
-.hide{
-  display:none;
-}
+      .hide {
+        display: none;
+      }
       .click-me button {
         background-color: #f78da7;
         color: white;
@@ -210,9 +210,9 @@
         animation: pulse 2s infinite;
       }
 
-      .row{
-        display:flex;
-        gap:20px;
+      .row {
+        display: flex;
+        gap: 20px;
         flex-wrap: wrap;
       }
 
@@ -243,10 +243,10 @@
           align-items: center;
         }
 
-        .order-step {
+        /*.order-step {
           width: 100%;
           max-width: none;
-        }
+        }*/
       }
     </style>
   </head>
@@ -263,15 +263,15 @@
       <h1 id="main-title">מארז מושלם לראש השנה</h1>
 
       <div class="section">
-        <div class="section-title " ></div>
+        <div class="section-title"></div>
         <div class="section-content">
           <div class="image-gallery" id="gallery1">
             <img src="images/pic1.jpg" alt="pic 1" class="gallery-image" />
             <img src="images/pic2.jpg" alt="pic 2" class="gallery-image" />
             <img src="images/pic3.jpg" alt="pic 3" class="gallery-image" />
-            <img src="images/pic4.png" alt="pic 4" class="gallery-image" />
+            <img src="images/pic4.jpg" alt="pic 4" class="gallery-image" />
             <img src="images/pic6.jpg" alt="pic 6" class="gallery-image" />
-            <img src="images/pic7.png" alt="pic 7" class="gallery-image" />
+            <img src="images/pic5.jpg" alt="pic 5" class="gallery-image" />
             <div class="gallery-nav"></div>
           </div>
         </div>
@@ -300,55 +300,61 @@
           </div>
         </div>
       </div>
-<div class=row>
-      <div class="section">
-        <div class="section-title" id="image-upgrade">שדרוג תמונה</div>
-        <div class="section-content">
-    
-              <div class="image-gallery" id="gallery3">
-            <img
-              src="images/photo1.jpg"
-              alt="Card Design 1"
-              class="gallery-image active"
-            />
-            <img
-              src="images/photo2.jpg"
-              alt="Card Design 2"
-              class="gallery-image"
-            />
-            <div class="gallery-nav"></div>
+      <div class="row">
+        <div class="section">
+          <div class="section-title" id="image-upgrade">שדרוג תמונה</div>
+          <div class="section-content">
+            <div class="image-gallery" id="gallery3">
+              <img
+                src="images/photo1.jpg"
+                alt="Card Design 1"
+                class="gallery-image active"
+              />
+              <img
+                src="images/photo2.jpg"
+                alt="Card Design 2"
+                class="gallery-image"
+              />
+              <div class="gallery-nav"></div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="section">
-        <div class="section-title" id="card-designs">עיצובים לכרטיס</div>
-        <div class="section-content">
-          <div class="image-gallery" id="gallery2">
-            <img
-              src="images/card1.jpg"
-              alt="Card Design 1"
-              class="gallery-image active"
-            />
-            <img
-              src="images/card2.jpg"
-              alt="Card Design 2"
-              class="gallery-image"
-            />
-            <img
-              src="images/card3.jpg"
-              alt="Card Design 3"
-              class="gallery-image"
-            />
-            <div class="gallery-nav"></div>
+        <div class="section">
+          <div class="section-title" id="card-designs">עיצובים לכרטיס</div>
+          <div class="section-content">
+            <div class="image-gallery" id="gallery2">
+              <img
+                src="images/card1.jpg"
+                alt="Card Design 1"
+                class="gallery-image active"
+              />
+              <img
+                src="images/card2.jpg"
+                alt="Card Design 2"
+                class="gallery-image"
+              />
+              <img
+                src="images/card3.jpg"
+                alt="Card Design 3"
+                class="gallery-image"
+              />
+              <div class="gallery-nav"></div>
+            </div>
           </div>
         </div>
       </div>
-   
-</div>  <div class="section">
-        <div class="section-title" id="end">הזמנות עד יום ראשון כ"ו אלול תשפ"ד 29/9/24 | אספקה עד לראש השנה</div>
-       <p id="contact" class="end-info">להזמנת כמויות שלחו מייל: noamstudio9@gmail.com‏ | לבירורים חייגו 0533181738</p>
-     </div>
+      <div class="section">
+        <div class="section-title" id="end">
+          הזמנות עד יום ראשון כ"ו אלול תשפ"ד 29/9/24 | אספקה עד לראש השנה
+        </div>
+        <p id="contact" class="end-info">
+          להזמנת כמויות שלחו מייל:
+          <a href="mailto:noamstudio9@gmail.com">noamstudio9@gmail.com</a> |
+          לבירורים חייגו
+          <a href="tel:0533181738">0533181738</a>
+        </p>
+      </div>
     </div>
 
     <div
@@ -430,8 +436,9 @@
             step4: "4",
             "card-designs": "בחרו כרטיס ברכה מתאים",
             "image-upgrade": "אפשרות לשדרוג - הוספת תמונה על מגנט",
-            "contact":"להזמנת כמויות שלחו מייל: noamstudio9@gmail.com‏ | לבירורים חייגו 0533181738",
-            "end":"הזמנות עד יום ראשון כ''ו אלול תשפ''ד 29/9/24 | אספקה עד לראש השנה"
+            contact:
+              'להזמנת כמויות שלחו מייל: <a href="mailto:noamstudio9@gmail.com">noamstudio9@gmail.com</a> | לבירורים חייגו <a href="tel:0533181738">0533181738</a>',
+            end: "הזמנות עד יום ראשון כ''ו אלול תשפ''ד 29/9/24 | אספקה עד לראש השנה",
           },
           en: {
             "main-title": "A sweet gift for the New Year!",
@@ -443,8 +450,9 @@
             step4: "4",
             "card-designs": "Choose a suitable greeting card",
             "image-upgrade": "Upgrade option - add a photo on a magnet",
-              "contact":"For bulk orders, send an email to: noamstudio9@gmail.com | For inquiries, call 0533181738.",
-              "end":"Orders until Sunday, 26th of Elul 5784, 29/9/24 | Delivery by Rosh Hashanah."
+            contact:
+              'For bulk orders, send an email to: <a href="mailto:noamstudio9@gmail.com">noamstudio9@gmail.com</a> | For inquiries, call <a href="tel:0533181738">0533181738</a>',
+            end: "Orders until Sunday, 26th of Elul 5784, 29/9/24 | Delivery by Rosh Hashanah.",
           },
         };
 
@@ -453,7 +461,7 @@
 
         for (const [id, text] of Object.entries(translations[currentLang])) {
           const element = document.getElementById(id);
-          if (element) element.textContent = text;
+          if (element) element.innerHTML = text;
         }
 
         const imagePath = `images/${
